@@ -4,45 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temukan Cinta Sejatimu</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lovecal.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <header>
-
-    </header>
-    <main>
-        <label>Nama Kamu</label>
-        <input type="text" id="name1" placeholder="Nama Kamu">
-        <input type="date" id="dob1">
-        <label>Nama Crush Kamu</label>
-        <input type="text" id="name2" placeholder="Nama Crush Kamu">
-        <input type="date" id="dob2">
-
-        <button id="hitungBtn">Hitung Kecocokan!</button>
-
-        <h2 id="hasilScore"></h2>
-
-        <div>
-            <h1>HISTORY:</h1>
-            <div id="history">
-
-            </div>
-            <button id="deleteBtn">Reset history</button>
+<body class="body">
+    <div class="hero">
+        <h1 class="mainTitle">True Love Calculator</h1>
+        <div class="mainkiri">
+            <h3>Nama Kamu</h3>
+            <input type="text" id="name1" placeholder="Nama Kamu">
+            <input type="date" id="dob1">
         </div>
-    </main>
-    <footer>
+        <button id="hitungBtn" class="button">Hitung</button>
+        <div class="mainkanan">
+            <h3>Nama Crush Kamu</h3>
+            <input type="text" id="name2" placeholder="Nama Crush Kamu">
+            <input type="date" id="dob2">
+        </div>
+        <h2 class="percentage" id="hasilScore">%</h2>
+        <div class="historyWrapper">
+            <h2 class="historyTitle">HISTORY:</h2>
+            <div id="history"></div>
+            <button id="deleteBtn" class="button" style="position:static; transform:none;">Reset history</button>
+        </div>
+    </div>
+
+    <footer class="footerKonsul">
         <h1>Bingung cara menyatakan cintamu? Ayo konsultasi dengan dokter cinta tersertifikasi kami!</h1>
         <h3>Pilih dokter cinta:</h3>
         <div>
-            <p>Nama: Dr. Bondan Ilham Sp.C<br>Spesialis: Menyatakan cinta<br>⭐ 4.9/5.0
-            </p>
-            <p>Nama: Dr. Ocha Sp.C<br>Spesialis: Menemukan cinta terdalam<br>⭐ 4.9/5.0
-            </p>
-            <p>Nama: Dr. Raihan Sgp.C<br>Spesialis: Dukun cinta<br>⭐ 4.9/5.0
-            </p>
-            <p>Nama: Dr. Opal Sp.C<br>Spesialis: Merebut kekasih orang<br>⭐ 5.0/5.0
-            </p>
+            <p>Nama: Dr. Bondan Ilham Sp.C<br>Spesialis: Menyatakan cinta<br>⭐ 4.9/5.0</p>
+            <p>Nama: Dr. Ocha Sp.C<br>Spesialis: Menemukan cinta terdalam<br>⭐ 4.9/5.0</p>
+            <p>Nama: Dr. Raihan Sgp.C<br>Spesialis: Dukun cinta<br>⭐ 4.9/5.0</p>
+            <p>Nama: Dr. Opal Sp.C<br>Spesialis: Merebut kekasih orang<br>⭐ 5.0/5.0</p>
         </div>
         <div>
             <p>Jadwalkan konsultasi:</p>
@@ -52,7 +50,7 @@
             <input type="number" placeholder="+62">
             <label for="doctor-select">Pilih Dokter:</label>
             <select name="doctor" id="doctor-select">
-                <option value="">--Please choose an option--</option>
+                <option value="" disabled selected>--Please choose an option--</option>
                 <option value="dr1">Dr. Bondan Ilham Sp.C</option>
                 <option value="dr2">Dr. Ocha Sp.C</option>
                 <option value="dr3">Dr. Raihan Sgp.C</option>
@@ -61,6 +59,7 @@
             <button id="konsulBtn">Submit form</button>
         </div>
     </footer>
+    <script src="calculator.js"></script>
 </body>
 <script src="calculator.js"></script>
 </html>

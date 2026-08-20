@@ -8,15 +8,59 @@
 </head>
 
 <body>
-    <input type="text" id="name1" placeholder="Nama Kamu">
-    <input type="date" id="dob1">
-    <input type="text" id="name2" placeholder="Nama Crush Kamu">
-    <input type="date" id="dob2">
+    <header>
 
-    <button id="hitungBtn">Hitung Kecocokan!</button>
+    </header>
+    <main>
+        <label>Nama Kamu</label>
+        <input type="text" id="name1" placeholder="Nama Kamu">
+        <input type="date" id="dob1">
+        <label>Nama Crush Kamu</label>
+        <input type="text" id="name2" placeholder="Nama Crush Kamu">
+        <input type="date" id="dob2">
 
-    <h2 id="hasilScore"></h2>
+        <button id="hitungBtn">Hitung Kecocokan!</button>
 
+        <h2 id="hasilScore"></h2>
+
+        <div>
+            <h1>HISTORY:</h1>
+            <div id="history">
+
+            </div>
+            <button id="deleteBtn">Reset history</button>
+        </div>
+    </main>
+    <footer>
+        <h1>Bingung cara menyatakan cintamu? Ayo konsultasi dengan dokter cinta tersertifikasi kami!</h1>
+        <h3>Pilih dokter cinta:</h3>
+        <div>
+            <p>Nama: Dr. Bondan Ilham Sp.C<br>Spesialis: Menyatakan cinta<br>⭐ 4.9/5.0
+            </p>
+            <p>Nama: Dr. Ocha Sp.C<br>Spesialis: Menemukan cinta terdalam<br>⭐ 4.9/5.0
+            </p>
+            <p>Nama: Dr. Raihan Sgp.C<br>Spesialis: Dukun cinta<br>⭐ 4.9/5.0
+            </p>
+            <p>Nama: Dr. Opal Sp.C<br>Spesialis: Merebut kekasih orang<br>⭐ 5.0/5.0
+            </p>
+        </div>
+        <div>
+            <p>Jadwalkan konsultasi:</p>
+            <label>Nama Kamu</label>
+            <input type="text" placeholder="Nama Kamu">
+            <label>No. Hp Kamu</label>
+            <input type="number" placeholder="+62">
+            <label for="doctor-select">Pilih Dokter:</label>
+            <select name="doctor" id="doctor-select">
+                <option value="">--Please choose an option--</option>
+                <option value="dr1">Dr. Bondan Ilham Sp.C</option>
+                <option value="dr2">Dr. Ocha Sp.C</option>
+                <option value="dr3">Dr. Raihan Sgp.C</option>
+                <option value="dr4">Dr. Opal Sp.C</option>
+            </select>
+            <button id="konsulBtn">Submit form</button>
+        </div>
+    </footer>
 </body>
 <script src="calculator.js"></script>
 </html>

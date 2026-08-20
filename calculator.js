@@ -42,8 +42,8 @@ let dataMatch = {
     finalScore
 }
 // console.log(dataMatch);
-save (dataMatch)
-render()
+save(dataMatch)
+// render()
 
 // const history = document.createElement("p");
 // history.innerText = `${namaPertama} x ${namaKedua} = ${finalScore}`;
@@ -52,6 +52,7 @@ render()
 
 tombolDelete.addEventListener('click', function(){
     calcuclateHistory = []
+    localStorage.setItem("dataMatch",JSON.stringify([]))
     localStorage.removeItem('dataMatch');
     let cerita = document.getElementById('history')
     let jumlahHistory = document.querySelectorAll('.historyClass')
@@ -64,6 +65,7 @@ tombolDelete.addEventListener('click', function(){
 
 function save (data){
     localStorage.setItem("dataMatch", JSON.stringify(data))
+    render()
 }
 
 function render (){
@@ -73,7 +75,7 @@ function render (){
     const pastData = localStorage.getItem('dataMatch')
 
     // calcuclateHistory = []
-    
+
     if (pastData){
         calcuclateHistory.push(JSON.parse(pastData))
         // console.log(calcuclateHistory);
@@ -111,8 +113,7 @@ function loveMeter(a){
     return a % 101
 }
 
-console.log(loveMeter());
-
+render()
 
 // render
 

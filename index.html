@@ -12,28 +12,51 @@
 </head>
 
 <body class="body">
-    <div class="hero">
+    <header class="mainHeader">
+    <div class="logoContainer">
+        <span class="logoIcon">💖</span>
+        <span class="logoText">True Love Calculator</span>
+    </div>
+
+    <nav class="navMenu">
+        <a href="#hero" class="navLink">Kalkulator</a>
+        <a href="#historyWrap" class="navLink">Riwayat</a>
+        <a href="#footerKonsul" class="navLink">Dokter Cinta</a>
+    </nav>
+
+    <div class="headerAction">
+        <button class="navBtn" onclick="document.querySelector('#footerKonsul').scrollIntoView({behavior: 'smooth'})">
+            Konsultasi Sekarang 💌
+        </button>
+    </div>
+</header>
+<main>
+
+    <div class="hero" id="hero">
         <h1 class="mainTitle">True Love Calculator</h1>
         <div class="mainkiri">
-            <h3>Nama Kamu</h3>
-            <input type="text" id="name1" placeholder="Nama Kamu">
-            <input type="date" id="dob1">
-        </div>
-        <button id="hitungBtn" class="button">Hitung</button>
-        <div class="mainkanan">
-            <h3>Nama Crush Kamu</h3>
-            <input type="text" id="name2" placeholder="Nama Crush Kamu">
-            <input type="date" id="dob2">
-        </div>
-        <h2 class="percentage" id="hasilScore">%</h2>
-        <div class="historyWrapper">
+    <h3>Nama Kamu</h3>
+    <input type="text" id="name1" class="heroInput" placeholder="Nama Kamu">
+    <input type="date" id="dob1" class="heroInput">
+</div>
+<button id="hitungBtn" class="button">Hitung</button>
+<div class="mainkanan">
+    <h3>Nama Crush Kamu</h3>
+    <input type="text" id="name2" class="heroInput" placeholder="Nama Crush Kamu">
+    <input type="date" id="dob2" class="heroInput">
+</div>
+        <h2 class="percentage" id="hasilScore"></h2>
+        <!--  -->
+        <div id="scrollHintContainer"></div>
+        <div class="historyWrapper" id="historyWrap">
             <h2 class="historyTitle">HISTORY:</h2>
             <div id="history"></div>
             <button id="deleteBtn" class="button" style="position:static; transform:none;">Reset history</button>
         </div>
     </div>
+</main>
 
-    <footer class="footerKonsul">
+    <footer class="footerKonsul" id="footerKonsul">
         <h1>Bingung cara menyatakan cintamu? Ayo konsultasi dengan dokter cinta tersertifikasi kami!</h1>
         <h3>Pilih dokter cinta:</h3>
         <div>
@@ -61,5 +84,4 @@
     </footer>
     <script src="calculator.js"></script>
 </body>
-<script src="calculator.js"></script>
 </html>

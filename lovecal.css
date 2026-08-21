@@ -1,3 +1,5 @@
+pal css
+
 .body {
     margin: 0 auto;
     min-height: 100vh;
@@ -62,7 +64,7 @@ input::placeholder {
 .mainkanan {
   width: 300px;
   height: 145px;
-  background-image: linear-gradient(135deg, #fbe8c8 0%, #d88c9a 100%);
+  background-image: linear-gradient(135deg, #fbe8c8 0%, #d88c9a 100%);an’t automatically merge.
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -274,4 +276,280 @@ h3 {
    transform: scale(1.03);
   box-shadow: 0 0 20px rgba(239, 16, 131, 0.5);;
 
+}
+
+/* tambahan */
+
+html {
+    scroll-behavior: smooth;
+}
+
+#scrollHintContainer {
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+.scrollHintText {
+    color: #FFD3AC;
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    line-height: 1.4;
+}
+
+.scrollHintBtn {
+    padding: 10px 22px;
+    background-image: linear-gradient(135deg, #fbe8c8 0%, #d88c9a 100%);
+    color: #752932;
+    border: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scrollHintBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(239, 16, 131, 0.6);
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(90, 42, 32, 0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 211, 172, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.logoIcon {
+    font-size: 1.8rem;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.logoText {
+    font-family: "Great Vibes", cursive;
+    font-size: 1.8rem;
+    color: #FFA14D;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.navMenu {
+    display: flex;
+    gap: 15px;
+}
+
+.navLink {
+    color: #FFD3AC;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.navLink:hover {
+    color: #fff;
+    border-color: rgba(239, 16, 131, 0.5);
+    background: rgba(239, 16, 131, 0.15);
+    box-shadow: 0 0 10px rgba(239, 16, 131, 0.3);
+}
+
+.navBtn {
+    padding: 8px 18px;
+    background-image: linear-gradient(135deg, #fbe8c8 0%, #d88c9a 100%);
+    color: #752932;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(239, 16, 131, 0.6);
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mainHeader {
+        padding: 12px 20px;
+    }
+
+    .logoText {
+        font-size: 1.5rem;
+    }
+
+    .mainTitle {
+        font-size: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    .mainkiri {
+        left: 5%;
+    }
+
+    .mainkanan {
+        right: 5%;
+    }
+
+    .button {
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    .button:hover {
+        transform: translate(50%, -50%) scale(1.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .mainHeader {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+    }
+
+    .navMenu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .navLink {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+
+    .navBtn {
+        font-size: 0.8rem;
+        padding: 6px 14px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 30px 15px 50px 15px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainTitle {
+        position: static;
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+        left: auto;
+        top: auto;
+    }
+
+    .mainkiri, 
+    .mainkanan {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        padding: 15px;
+        margin: 10px 0;
+        box-sizing: border-box;
+        left: auto;
+        right: auto;
+        top: auto;
+    }
+
+    .mainkiri:hover, 
+    .mainkanan:hover {
+        transform: scale(1.02);
+    }
+
+    .heroInput {
+        width: 90%;
+        position: static;
+        display: block;
+        margin: 8px auto;
+    }
+
+    .button {
+        position: static;
+        transform: none;
+        margin: 15px 0;
+        width: 120px;
+        height: 45px;
+        right: auto;
+        top: auto;
+    }
+
+    .button:hover {
+        transform: scale(1.05);
+    }
+
+    .percentage {
+        position: static;
+        transform: none;
+        margin: 15px 0;
+        font-size: 1.5rem;
+        left: auto;
+        top: auto;
+    }
+
+    #scrollHintContainer {
+        position: static;
+        transform: none;
+        margin: 20px auto;
+        width: 100%;
+        left: auto;
+        top: auto;
+    }
+
+    .scrollHintText {
+        font-size: 1rem;
+    }
+
+    .historyWrapper {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 320px;
+        margin-top: 20px;
+        left: auto;
+        top: auto;
+    }
+
+    .footerKonsul {
+        padding: 40px 15px;
+    }
+
+    .footerKonsul h1 {
+        font-size: 1.4rem;
+    }
 }
